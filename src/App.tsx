@@ -1,6 +1,6 @@
 import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState} from "react";
 import { useWallet, InputTransactionData } from '@aptos-labs/wallet-adapter-react';
 import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
 import { ONCHAIN_BIO } from "./constants";
@@ -16,7 +16,7 @@ function App() {
   const name = useRef<HTMLInputElement>(null);
   const bio = useRef<HTMLTextAreaElement>(null);
 
-  const [accountHasBio, setAccountHasBio] = useState(false);
+  const [, setAccountHasBio] = useState(false);
   const [currentName, setCurrentName] = useState(null);
   const [currentBio, setCurrentBio] = useState(null);
 
